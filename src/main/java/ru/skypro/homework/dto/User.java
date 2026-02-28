@@ -24,7 +24,7 @@ public class User {
     private String phone;
 
     @Schema(description = "роль пользователя (USER или ADMIN)")
-    private String role;
+    private Role role;
 
     @Schema(description = "ссылка на аватар пользователя")
     private String image;
