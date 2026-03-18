@@ -18,7 +18,6 @@ public class WebConfig implements WebMvcConfigurer {
                 .setCachePeriod(3600);
     }
 
-
     @Bean
     public CorsFilter corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
@@ -29,7 +28,6 @@ public class WebConfig implements WebMvcConfigurer {
         config.addAllowedMethod("*");
         config.setAllowCredentials(true);
 
-        // РЕГИСТРИРУЕМ ВСЕ НЕОБХОДИМЫЕ ПУТИ
         source.registerCorsConfiguration("/images/**", config);
         source.registerCorsConfiguration("/users/**", config);
         source.registerCorsConfiguration("/ads/**", config);
@@ -37,6 +35,5 @@ public class WebConfig implements WebMvcConfigurer {
         source.registerCorsConfiguration("/register", config);
 
         return new CorsFilter(source);
-
     }
 }

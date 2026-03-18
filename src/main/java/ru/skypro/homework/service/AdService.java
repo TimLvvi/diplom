@@ -1,7 +1,7 @@
 package ru.skypro.homework.service;
 
 
-import org.springframework.security.core.Authentication;
+
 import org.springframework.stereotype.Service;
 import ru.skypro.homework.dto.Ad;
 import ru.skypro.homework.dto.Ads;
@@ -14,7 +14,6 @@ import ru.skypro.homework.mapper.CreateOrUpdateAdMapper;
 import ru.skypro.homework.repository.AdRepository;
 import ru.skypro.homework.repository.UserRepository;
 
-import java.util.List;
 
 @Service
 public class AdService {

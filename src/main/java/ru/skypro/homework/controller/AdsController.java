@@ -44,7 +44,6 @@ public class AdsController {
     }
 
 
-
     @Operation(summary = "Добавление объявления")
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<Ad> addAd(
@@ -64,7 +63,6 @@ public class AdsController {
     }
 
 
-
     @Operation(summary = "Получение информации об объявлении")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "OK"),
@@ -74,9 +72,8 @@ public class AdsController {
     @GetMapping("/{id}")
     public ResponseEntity<ExtendedAd> getAds(@PathVariable Integer id) {
 
-            return ResponseEntity.ok(adService.getAds(id));
+        return ResponseEntity.ok(adService.getAds(id));
     }
-
 
 
     @Operation(summary = "Удаление объявления")
@@ -92,7 +89,6 @@ public class AdsController {
         adService.removeAd(id, authentication.getName());
         return ResponseEntity.noContent().build();
     }
-
 
 
     @Operation(summary = "Обновление информации об объявлении")
@@ -111,7 +107,6 @@ public class AdsController {
     }
 
 
-
     @Operation(summary = "Получение объявлений авторизованного пользователя")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "OK"),
@@ -121,7 +116,6 @@ public class AdsController {
     public ResponseEntity<Ads> getAdsMe(Authentication authentication) {
         return ResponseEntity.ok(adService.getAdsMe(authentication.getName()));
     }
-
 
 
     @Operation(summary = "Обновление картинки объявления")

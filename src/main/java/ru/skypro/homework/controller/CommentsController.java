@@ -35,7 +35,6 @@ public class CommentsController {
     }
 
 
-
     @Operation(summary = "Добавление комментария к объявлению")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "OK"),
@@ -49,7 +48,6 @@ public class CommentsController {
             Authentication authentication) {
         return ResponseEntity.ok(commentService.addComment(id, comment, authentication.getName()));
     }
-
 
 
     @Operation(summary = "Удаление комментария")
@@ -67,7 +65,6 @@ public class CommentsController {
         commentService.deleteComment(adId, commentId, authentication.getName());
         return ResponseEntity.ok().build();
     }
-
 
 
     @Operation(summary = "Обновление комментария")

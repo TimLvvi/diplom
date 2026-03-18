@@ -2,6 +2,7 @@ package ru.skypro.homework.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity

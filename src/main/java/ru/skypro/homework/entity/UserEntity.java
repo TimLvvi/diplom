@@ -46,5 +46,4 @@ public class UserEntity {
     @JsonManagedReference
     private List<CommentEntity> comments;
 
-
 }
