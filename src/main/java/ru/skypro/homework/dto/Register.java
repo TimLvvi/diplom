@@ -26,5 +26,4 @@ public class Register {
     @Schema(description = "роль пользователя (USER или ADMIN)")
     private Role role;
 
-
 }

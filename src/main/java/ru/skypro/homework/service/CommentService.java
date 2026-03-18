@@ -51,7 +51,7 @@ public class CommentService {
         return commentMapper.toDto(commentRepository.save(entity));
     }
 
-    //Управление комментариями
+    //Удаление комментариями
     public void deleteComment(Integer adId, Integer commentId, String userEmail) {
         CommentEntity comment = commentRepository.findById(commentId)
                 .orElseThrow(() -> new RuntimeException("Комментарий не найден"));

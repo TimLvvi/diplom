@@ -13,7 +13,7 @@ import ru.skypro.homework.dto.Login;
 import ru.skypro.homework.dto.Register;
 import ru.skypro.homework.service.AuthService;
 
-// Контроллер для регистрации и авторизации
+
 @Slf4j
 @CrossOrigin(value = "http://localhost:3000")
 @Tag(name = "Авторизация и Регистрация", description = "Регистрация и вход в систему")

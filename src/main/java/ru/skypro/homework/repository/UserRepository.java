@@ -5,7 +5,8 @@ import ru.skypro.homework.entity.UserEntity;
 
 import java.util.Optional;
 
-public interface UserRepository extends JpaRepository<UserEntity,Integer> {
+public interface UserRepository extends JpaRepository<UserEntity, Integer> {
     Optional<UserEntity> findByEmail(String email);
+
     boolean existsByEmail(String email);
 }
